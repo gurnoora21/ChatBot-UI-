@@ -18,7 +18,7 @@ socketio = SocketIO(app)
 @app.route("/home")
 def home():
     form = Userinput()
-    return render_template('homepage.html', form=form)
+    return render_template('home.html', form=form)
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')

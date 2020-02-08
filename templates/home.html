@@ -10,10 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       body {
-        font-family: monospace;
+        font-family: Calibri;
       }
       h1 {
-        background-color: yellow;
+        background-color: white;
         display: inline-block;
         font-size: 3em;
         margin: 0;
@@ -28,8 +28,8 @@
       #chatbox {
         margin-left: auto;
         margin-right: auto;
-        width: 40%;
-        margin-top: 60px;
+        width: 90%;f
+        margin-top: 30px;
       }
       #userInput {
         margin-left: auto;
@@ -40,13 +40,13 @@
       #textInput {
         width: 90%;
         border: none;
-        border-bottom: 3px solid black;
-        font-family: monospace;
+        border-bottom: 2px solid black;
+        font-family: Calibri;
         font-size: 17px;
       }
       .userText {
         color: white;
-        font-family: monospace;
+        font-family: Calibri;
         font-size: 17px;
         text-align: right;
         line-height: 30px;
@@ -54,11 +54,11 @@
       .userText span {
         background-color: #808080;
         padding: 10px;
-        border-radius: 2px;
+        border-radius: 10px;
       }
       .botText {
         color: white;
-        font-family: monospace;
+        font-family: Calibri;
         font-size: 17px;
         text-align: left;
         line-height: 30px;
@@ -66,7 +66,7 @@
       .botText span {
         background-color: #4169e1;
         padding: 10px;
-        border-radius: 2px;
+        border-radius: 10px;
       }
       #tidbit {
         position: absolute;
@@ -77,42 +77,44 @@
       .boxed {
         margin-left: auto;
         margin-right: auto;
-        width: 78%;
-        margin-top: 60px;
-        border: 1px solid green;
+        width: 100%;
+        margin-top: 40px;
+        //border: 1px solid ;
       }
       .box {
-        border: 2px solid black;
+        border: 1.5px solid black;
       }
     </style>
   </head>
-  <body>
+  <body style="background-color:white">
+
+
+
+
     <img />
     <center>
       <h1>
         <img
-          src="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
-          alt="CANDICE"
-          style="width:40px;height:40px;"
-        />Your Personal ChatBot
+          src="https://www.atb.com/Static/img/ATBlogo.PNG"
+          style="width:120px;height:120px;"
+        />
+        <div>
+          Your personal ATB helper
+        </div>
       </h1>
     </center>
     <h3>
-      <p>
-        Like this? ❤️ Tweet me 👉
-        <a href="https://twitter.com/_sahilrajput">@_sahilrajput</a>. Find this
-        project on
-        <a href="https://www.github.com/sahil-rajput/Candice">GitHub</a>.
-      </p>
+
+
     </h3>
     <div class="box"></div>
     <div class="boxed">
       <div>
         <div id="chatbox">
           <img
-            src="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
+          src="https://www.atb.com/Static/img/ATBlogo.PNG"
             alt="CANDICE"
-            style="width:40px;height:40px;"
+            style="width:30px;height:30px;"
           />
           <p class="botText">
             <span>Hi! I'm Candice your personal ChatBot ❤️</span>
@@ -123,6 +125,11 @@
         </div>
       </div>
       <script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+      <script type="text/javascript">
+
         function getBotResponse() {
           var rawText = $("#textInput").val();
           var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
@@ -144,6 +151,7 @@
             getBotResponse();
           }
         });
+
       </script>
     </div>
   </body>
