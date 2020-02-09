@@ -2,7 +2,8 @@ from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
-
+from API_CALL import *
+import requests
 app = Flask(__name__)
 
 bot = ChatBot("Candice")
@@ -17,12 +18,19 @@ trainer.train([
     "Thank you",
     "You are welcome.",
 ])
+
+
+
+
 trainer2.train("chatterbot.corpus.english.greetings")
 trainer2.train("chatterbot.corpus.english.conversations")
-trainer.train(['What is the closest branch near me?','One is at 601 Stewart Green SW Calgary'])
+trainer.train(['What is the closest branch near me?', returnstr()])
 trainer.train(['What is the closest branch near me?','One is at 2140 34 Ave SW, Calgary, AB T2T 5P6'])
 trainer.train(['Who are all of my counterparties?', 'Right now your counter parties; Telus, University of Calgary,'])
 trainer.train(['What types of preferred credit cards do you offer?', 'We offer Fixed-rate master card and Variable-rate master card'])
+
+
+
 
 
 
